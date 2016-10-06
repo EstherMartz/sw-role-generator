@@ -1,0 +1,37 @@
+<div class="col-md-8 col-md-offset-2 animated fadeIn">
+    <div class="col-md-6">
+        <div class="row">
+            <h2>{{character.info.name}}</h2>
+            <span class="tag tag-info">Specie: {{character.info.specie}}</span>
+            <span class="tag" ng-class="character.info.gender != 'female' ? 'tag-success' : 'tag-danger'">Gender: {{character.info.gender}}</span>
+            <div class="separator"/>
+        </div>
+        <div class="row">
+            <span class="left icon"><img width="20px" src="/images/class.png"/><b>Class:</b> {{character.info.class}}</span><br>
+            <span class="left icon"><img width="20px" src="/images/weapons.png"/><b>Weapons expertise:</b> {{character.info.weapon}}</span><br>
+            <span class="left icon"><img width="20px" src="/images/combatExpertise.png"/><b>Combat expertise:</b> {{character.info.combatExpertise}}</span>
+        </div>    
+    </div>
+
+        <div class="col-md-6">
+            <img src="http://lorempixel.com/200/200/cats/">
+        </div>
+    
+    <div class="row col-md-12 text-center">
+        <div class="separator"/>
+        <div class="separator"/>
+        <div class="col-md-12">
+            <span class="text-left" ng-repeat="item in character.info.availableStats"><b>{{item}}</b>:  {{character.info.stats[$index]}}  </span>
+        </div>
+        
+        <div class="separator"><br></div>
+        <div class="separator"><br></div>
+        
+    </div>    
+          
+    <div class="row text-center">
+        <br>
+        <button ng-click="character.reload()">Don't like it. Give me a cooler one!</button>
+    </div>    
+    
+</div>

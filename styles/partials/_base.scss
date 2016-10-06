@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    padding-top: 10%;
+    font-family: $font !important;
+}
+
+a{
+    color: $gray !important;
+}
+
+.jumbotron{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.main-wrapper{
+    @include css-gradient(#ffffff,#999);
+    height: 100%;
+}
+
+.separator{
+    margin-top: 1em !important;
+}
+
+.getCharacter{
+    img{
+        margin-right: 1em;
+    }
+}
+
+.disclaimer{
+    margin-top: 2em;
+    font-size: $small;
+    color: lighten($gray, 50%);
+}
+
+button{
+    padding: 1.5em;
+    background-color: transparent;
+    border-radius: 5px !important;
+    border: 1px solid $sw-yellow;
+    text-transform: uppercase;
+    transition: background-color 0.2s linear;;
+    
+    &:hover{
+        background-color: $sw-yellow;
+        color: white;
+    }
+}
